@@ -1,13 +1,13 @@
-import React from 'react'
-import item from './item'
 
-const itemList = (prop) => {
-   
+import Item from './Item'
+
+const ItemList = ({lista}) => {
+    
     return (
         <div>
-           Remeras.map( prop ={<item/>}  ) 
+           {lista.map( remera =>{ return <Item prop ={remera}/>})}
         </div>
     )
 }
 
-export default itemList
+export default ItemList

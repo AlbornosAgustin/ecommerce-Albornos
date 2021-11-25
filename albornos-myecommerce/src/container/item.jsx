@@ -1,9 +1,9 @@
-const item = (props) => {
+const item = ({prop}) => {
     return (
         <div>
-          <h1>{props.prod}</h1>  
-          <img src={props.imgUrl} alt=""></img>
-          <h1>Precio:{props.price}</h1>    
+          <h1>{prop.prod}</h1>  
+          <img src={prop.imgUrl} alt=""></img>
+          <h1>Precio:{prop.price}</h1>    
         </div>
     )
 }
