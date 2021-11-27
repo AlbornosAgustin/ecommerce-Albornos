@@ -6,13 +6,13 @@ function NavBar () {
     return (
         <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
         <Container>
-        <Navbar.Brand href="#home">Ohanna</Navbar.Brand>
+        <link to="/"> <Navbar.Brand href="#home">Ohanna</Navbar.Brand></link>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="#features">Remeras</Nav.Link>
-            <Nav.Link href="#pricing">Buzos</Nav.Link>
-            <Nav.Link href="#pricing">Pantalones</Nav.Link>
+           <link to="/categoria/remeras"> <Nav.Link href="#features">Remeras</Nav.Link></link>
+           <link to="/categoria/buzos"> <Nav.Link href="#pricing">Buzos</Nav.Link></link>
+           <link to="/categoria/pantalones"><Nav.Link href="#pricing">Pantalones</Nav.Link></link>
          
           </Nav>
           <Nav>
