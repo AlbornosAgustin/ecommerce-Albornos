@@ -1,4 +1,5 @@
 import {Navbar,Nav,Container} from 'react-bootstrap'
+import { Link  } from 'react-router-dom';
 import CartWidget from './CartWidget'
 
 
@@ -6,13 +7,13 @@ function NavBar () {
     return (
         <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
         <Container>
-        <link to="/"> <Navbar.Brand href="#home">Ohanna</Navbar.Brand></link>
+        <Link to="/"> <Navbar.Brand href="#home">Ohanna</Navbar.Brand></Link>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
-           <link to="/categoria/remeras"> <Nav.Link href="#features">Remeras</Nav.Link></link>
-           <link to="/categoria/buzos"> <Nav.Link href="#pricing">Buzos</Nav.Link></link>
-           <link to="/categoria/pantalones"><Nav.Link href="#pricing">Pantalones</Nav.Link></link>
+           <Link to="/categoria/remeras"> <Nav.Link href="#features">Remeras</Nav.Link></Link>
+           <Link to="/categoria/buzos"> <Nav.Link href="#pricing">Buzos</Nav.Link></Link>
+           <Link to="/categoria/pantalones"><Nav.Link href="#pricing">Pantalones</Nav.Link></Link>
          
           </Nav>
           <Nav>

@@ -5,7 +5,7 @@ const item = ({prop}) => {
         <div class="product-conteiner">
           <h1 >{prop.prod}</h1>  
           <img  src={prop.imgUrl} alt=""></img>
-          <h1>Precio:{prop.price}</h1>    
+          <h3 class>Precio:{prop.price}</h3>    
         </div>
 
       </div>

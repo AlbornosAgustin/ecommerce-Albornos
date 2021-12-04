@@ -2,17 +2,19 @@ import React from 'react'
 import { useEffect,useState } from 'react'
 import { useParams } from 'react-router-dom';
 import { getFetch } from '../components/getFetch';
+import ItemDetail from './ItemDetail';
 
-const itemDetailContainer = () => {
+
+const ItemDetailContainer = () => {
     const [productoIndividual, setProductoIndividual]= useState({}); 
     const [loading, setLoading] = useState(true);
     const { itemIdParams } = useParams();
 
     useEffect(() => {
             
-        getFetch .then((prodEncontrado)=>{
+        getFetch.then((prodEncontrado)=>{
             console.log('OK');
-            setProductoIndividual(prodEncontrado) 
+            setProductoIndividual(prodEncontrado.find(item =>item.id.toString()===itemIdParams))
         })
           .catch((error)=>{
               console.log('ERROR');
@@ -41,4 +43,4 @@ const itemDetailContainer = () => {
         )
 }
 
-export default itemDetailContainer
+export default ItemDetailContainer
