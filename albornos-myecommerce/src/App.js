@@ -4,11 +4,12 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import ItemListContainer from './container/ItemListContainer';
 import { BrowserRouter,Routes,Route } from 'react-router-dom';
 import ItemDetailContainer from './detalle/ItemDetailContainer';
-import { CartContext } from './components/context/cartContext';
+import { CartContextProvider } from './components/context/CartContext';
+import Cart from './components/Cart/Cart';
 
 function App() {
   return (
-    <CartContext.Provider>  
+    <CartContextProvider.Provider>  
       <BrowserRouter value={{}}>
         <div className="App">
           <NavBar />
@@ -17,12 +18,12 @@ function App() {
             <Route exact path="/" element={<ItemListContainer />} />
             <Route path="categoria/:catIdParams" element={<ItemListContainer />} />
             <Route path="item/:itemIdParams" element={<ItemDetailContainer/>} />
+            <Route path="/cart" element={<Cart/>} />
           </Routes>
         </div>
       </BrowserRouter>
-    </CartContext.Provider>
+    </CartContextProvider.Provider>
   );
  
 }
-
 export default App;

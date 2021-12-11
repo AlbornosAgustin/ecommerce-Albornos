@@ -18,7 +18,8 @@ function NavBar () {
           </Nav>
           <Nav>
             <Nav.Link href="#deets">
-                <CartWidget/>
+            <Link to="/cart"> <CartWidget /> </Link> 
+                           
             
             </Nav.Link>
        
